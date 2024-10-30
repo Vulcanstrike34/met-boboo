@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #loveButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #e91e63;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #loveButton:hover {
+            background-color: #d81b60;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="loveButton">Love</button>
+        <p id="message">Selamat bobo cantik, I love you</p>
+    </div>
+    <audio id="audio" src="about_you.mp3"></audio> <!-- ganti dengan path lagu "About You" -->
+    
+    <script>
+        document.getElementById("loveButton").addEventListener("click", function() {
+            const message = document.getElementById("message");
+            const audio = document.getElementById("audio");
+
+            // Tampilkan pesan
+            message.style.display = "block";
+
+            // Mulai putar musik
+            audio.play();
+        });
+    </script>
+</body>
+</html>
